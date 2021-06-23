@@ -1,0 +1,90 @@
+<%- include partials/header %>
+
+  <main>
+    <section class="sec-padding">
+      <div class="container flex center">
+        <h1>This is your statement </h1>
+
+      </div>
+     
+    </section>
+    <section class="sec-padding">
+      <div class="container flex center">
+        
+            <% if(user.balance>=0){ %> 
+              <h3>Your Balance is:- <span class="color-pri"><%= user.balance  %> </span></h3>
+                  <% } %>  
+                  <% if(user.balance<0){ %> 
+                    <h3>Your Balance is:- <span class="color-sec"><%= user.balance  %> </span></h3>
+                      <% } %> 
+
+                      <% if(totalBalOfMonth>0){ %> 
+                        <h3>Your Balance of this search is:- <span class="color-pri"><%= totalBalOfMonth  %> </span></h3>
+                        <% } %> 
+                        <% if(totalBalOfMonth<0){ %> 
+                          <h3>Your Balance of this search is:- <span class="color-sec"><%= totalBalOfMonth  %> </span></h3>
+                            <% } %> 
+       
+      </div>
+    </section>
+    <section class="sec-padding">
+      <div class="container flex jsb">
+        
+        <div class="flex center" >
+          <a href="/users/statement/all" class="btn btn-ter">Reset</a>
+        </div>
+
+          <form action="/users/statement/dateFilter" method="POST" class="filter-form">
+
+<fieldset>
+  <label for="from">From date</label>
+  <input type="date" name="from" id="from">
+
+</fieldset>    
+
+<fieldset>
+  <label for="to">To date</label>
+  <input type="date" name="to" id="to">
+
+</fieldset>    
+<a href="#"><button type="submit" class="btn btn-pri">Submit</button></a> 
+  </form>
+        
+  <div class="flex center">
+    <form action="/users/statement/byMonth" method="POST">
+      <input type="month" value="2021-06" name="month">
+      
+      <a href="#"><button type="submit" class="btn btn-pri">Submit</button></a> 
+    </form>
+  </div>
+      </div>
+    </section>
+    <section class="sec-padding">
+        <div class="container flex center">
+            <div class="statement-div ">
+                <% newArr.forEach(ele=>{ %>
+                    <% if(ele.type==="expense"){ %> 
+                    <article class="transaction  flex jsb background-sec">
+                        <h5><%= ele.source  %> </h5>
+                        <h4><%= ele.amount %> </h4>
+                        <a href="#" class="btn btn-ter">Details</a>
+                    </article>
+                    <% } %> 
+
+                    <% if(ele.type==="income"){ %> 
+                        <article class="transaction  flex jsb background-pri">
+                            <h5><%= ele.source  %> </h5>
+                            <h4><%= ele.amount %> </h4>
+                            <a href="#" class="btn btn-ter">Details</a>
+                        </article>
+                        <% } %> 
+                    <% }) %> 
+
+                   
+                
+            </div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
