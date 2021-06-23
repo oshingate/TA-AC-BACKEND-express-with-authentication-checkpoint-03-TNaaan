@@ -1,0 +1,31 @@
+<%- include partials/header %>
+
+  <main>
+    <section class="sec-padding">
+      <div class="container flex center">
+        <h1>Dashboard of <span class="color-sec"> <%= user.name  %></span>  </h1>
+      </div>
+     
+    </section>
+    <section class="sec-padding">
+      <div class="container flex center">
+        <% if(user.balance>=0){ %> 
+        <h3>Your Balance is:- <span class="color-pri"><%= user.balance  %> </span></h3>
+          <% } %> 
+          <% if(user.balance<0){ %> 
+            <h3>Your Balance is:- <span class="color-sec"><%= user.balance  %> </span></h3>
+              <% } %> 
+      </div>
+    </section>
+    <section class="sec-padding">
+      <div class="container flex center">
+     <div class="btn-div">
+         <a href="/income/new" class="btn btn-ter">Add Income</a>
+         <a href="/expense/new" class="btn btn-ter">Add Exprense</a>
+         <a href="/users/statement/all" class="btn btn-ter">statement </a>
+     </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

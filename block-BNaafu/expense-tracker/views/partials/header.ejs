@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex jsb">
+        <strong>Expense Tracker</strong>
+        <% if(!user){ %>
+        <div class="btn-div">
+          <a href="/users/login" class="btn btn-ter">Login</a>
+          <a href="/users/register" class="btn btn-ter">Register</a>
+        </div>
+        <% } %> <% if(user){ %>
+        <div class="btn-div">
+          <span class="color-pri"><%= user.name %> </span>
+          <a href="/home" class="btn btn-ter">Home</a>
+          <a href="/users/logout" class="btn btn-ter">Logout</a>
+        </div>
+        <% } %>
+      </div>
+    </header>
+  </body>
+</html>

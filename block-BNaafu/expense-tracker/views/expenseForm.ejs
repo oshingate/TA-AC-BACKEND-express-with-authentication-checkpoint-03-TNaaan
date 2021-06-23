@@ -1,0 +1,35 @@
+<%- include partials/header %>
+
+  <main>
+    <section class="sec-padding">
+      <div class="container flex center">
+        <h1>Income add form </h1>
+      </div>
+     
+    </section>
+    <section class="sec-padding">
+      <div class="container flex center">
+          <form action="/expense/new" method="POST">
+        <fieldset>
+            <label for="source">Enter expense name:-</label>
+            <input type="text" placeholder="expense source" name="source">
+        </fieldset>
+        <fieldset>
+            <label for="category">Enter category of expense:-</label>
+            <input type="text" placeholder="category" name="category">
+        </fieldset>
+        <fieldset>
+            <label for="amount">Enter Source of income:-</label>
+            <input type="number" placeholder="enter amount" name="amount">
+        </fieldset>
+        <fieldset>
+            <label for="date">Enter date:-</label>
+            <input type="date" placeholder="enter date" name="date">
+        </fieldset>
+        <a href="#"> <button type="submit" class="btn btn-pri">Submit</button></a>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

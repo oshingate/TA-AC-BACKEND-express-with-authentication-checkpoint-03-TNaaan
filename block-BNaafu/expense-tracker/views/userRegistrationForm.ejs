@@ -1,0 +1,44 @@
+<%- include partials/header %>
+
+  <main>
+    <section class="sec-padding">
+      <div class="container flex center">
+        <h1>User Registeration Form </h1>
+      </div>
+     
+    </section>
+    
+    <section class="sec-padding">
+        <div class="container flex center">
+          <form action="/users/register" method="POST">
+            <fieldset>
+                <label for="name">Enter Name:-</label>
+                <input type="text" placeholder="Enter Name" name="name">
+            </fieldset>
+            <fieldset>
+                <label for="email">Enter Email:-</label>
+                <input type="email" placeholder="Enter Email" name="email">
+            </fieldset>
+            <fieldset>
+                <label for="age">Enter Age:-</label>
+                <input type="number" placeholder="Enter age" name="age">
+            </fieldset>
+            <fieldset>
+                <label for="phone">Enter phone:-</label>
+                <input type="number" placeholder="Enter phone" name="phone">
+            </fieldset>
+            <fieldset>
+                <label for="country">Enter country:-</label>
+                <input type="text" placeholder="Enter country" name="country">
+            </fieldset>
+            <fieldset>
+                <label for="password">Enter password:-</label>
+                <input type="password" placeholder="Enter password" name="password">
+            </fieldset>
+            <a href="#"><button type="submit" class="btn btn-pri">Submit</button></a>
+        </form>
+        </div>
+      </section>
+  </main>
+</body>
+</html>

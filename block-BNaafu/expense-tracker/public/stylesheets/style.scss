@@ -1,0 +1,320 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// custome css
+
+body {
+  font-size: 20px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  vertical-align: middle;
+  background-color: #eaeded;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+.btn-pri {
+  background-color: green;
+  color: wheat;
+}
+.btn-sec {
+  background-color: rgb(216, 81, 81);
+  color: wheat;
+}
+.btn-ter {
+  background: linear-gradient(to bottom, rgb(247, 225, 167), rgb(199, 157, 50));
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.color-sec {
+  color: rgb(209, 63, 63);
+}
+.color-pri {
+  color: green;
+}
+.background-sec {
+  background-color: rgb(209, 63, 63);
+}
+.background-pri {
+  background-color: green;
+}
+.felxi-img {
+  height: 100%;
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-30 {
+  flex: 0 1 24%;
+  margin: 1%;
+}
+.flex-25 {
+  flex: 0 1 25%;
+}
+.flex-75 {
+  flex: 0 1 75%;
+}
+.jsb {
+  justify-content: space-between;
+}
+.aic {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.center-center {
+  justify-content: center;
+  align-items: center;
+}
+.underline {
+  text-decoration: underline;
+}
+input {
+  width: 100%;
+  padding: 0.3rem 0;
+  border-radius: 10px;
+  border: none;
+  &::placeholder {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.card {
+  padding: 1rem;
+  background-color: white;
+  width: 700px;
+  box-shadow: 4px 4px 4px rgb(99, 97, 97);
+  margin: 0.5rem 0;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: linear-gradient(
+    to top right,
+    rgb(248, 195, 145),
+    rgb(238, 154, 76)
+  );
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgb(99, 97, 97);
+  & > * {
+    margin: 0.5rem 0;
+  }
+}
+.sec-padding {
+  padding: 3rem 0;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+// header
+
+header {
+  padding: 1rem 0;
+  background-color: rgb(19, 25, 33);
+  .logo {
+    height: 3rem;
+    width: 6rem;
+  }
+  strong {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+  }
+  a {
+    margin-right: 1rem;
+  }
+}
+
+//
+.transaction {
+  width: 900px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 4px 4px 4px gray;
+  margin-bottom: 1rem;
+}
+//filter-form
+.filter-form {
+  width: 300px;
+  input {
+    width: auto;
+  }
+}
